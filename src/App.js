@@ -1,7 +1,13 @@
 import React from "react";
-
+import Index from "./pages/Index/index";
+import GlobalStyles from "./styles/global";
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <GlobalStyles />
+      <Index />
+    </>
+  );
 }
 
 export default App;
