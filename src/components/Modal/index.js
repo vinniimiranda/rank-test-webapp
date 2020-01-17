@@ -1,13 +1,23 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import { Container, CardModal, Close, TextInput, Button } from "./styles";
 
+import { closeModal } from "../../store/modal/actions";
+
 export default function Modal() {
-  return (
+  const dispatch = useDispatch();
+  const open = useSelector(state => state.modal.open);
+
+  return open ? (
     <Container>
       <CardModal>
         <div>
-          <Close color="#333" size={20} />
+          <Close
+            color="#333"
+            size={20}
+            onClick={() => dispatch(closeModal())}
+          />
         </div>
 
         <form>
@@ -19,5 +29,7 @@ export default function Modal() {
         </form>
       </CardModal>
     </Container>
+  ) : (
+    <></>
   );
 }
