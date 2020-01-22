@@ -59,7 +59,7 @@ export default function Modal() {
       <CardModal>
         <div>
           <Close
-            color="#333"
+            color="#c02"
             size={20}
             onClick={() => dispatch(closeModal())}
           />

@@ -50,16 +50,12 @@ export default function Index() {
           >
             <Card>
               <Actions>
-                <MdEdit
-                  color="#0c1"
-                  size={20}
-                  onClick={() => handleEdit(alert)}
-                />
-                <MdClose
-                  color="#c02"
-                  size={20}
-                  onClick={() => handleRemove({ id: alert._id })}
-                />
+                <button onClick={() => handleEdit(alert)} type="button">
+                  <MdEdit color="#0c1" size={20} />
+                </button>
+                <button onClick={() => handleRemove({ id: alert._id })}>
+                  <MdClose color="#c02" size={20} />
+                </button>
               </Actions>
               <AlertTitle>{alert.keyword}</AlertTitle>
               <span>every {alert.interval} minutes</span>
@@ -72,7 +68,7 @@ export default function Index() {
       </Row>
 
       <AddButon onClick={() => dispatch(openModal())}>
-        <MdAdd size={25} color="#0D97C5" />
+        <MdAdd size={25} color="#7800ff" />
       </AddButon>
     </Container>
   );

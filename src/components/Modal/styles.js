@@ -15,10 +15,11 @@ export const Container = styled.div`
 export const CardModal = styled.div`
   width: 400px;
   height: 400px;
-  background: #fff;
+  background: #212133;
   border-radius: 4px;
-  filter: drop-shadow(3px 3px 3px #333);
+  filter: drop-shadow(3px 3px 3px #111125);
   display: flex;
+  z-index: 99;
   flex-direction: column;
 
   > div {
@@ -32,14 +33,14 @@ export const CardModal = styled.div`
     flex: 1;
     padding: 15px;
     flex-direction: column;
-    background: #fff;
+    background: #212133;
     justify-content: center;
     border-radius: 4px;
 
     label {
       padding-left: 5px;
       font-weight: bold;
-      color: #0d97c5;
+      color: #7800ff;
     }
   }
 `;
@@ -55,18 +56,19 @@ export const TextInput = styled.input`
   border-radius: 4px;
 
   padding-left: 15px;
-  background: #eee;
+  background: #000014;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
+  color: #fff;
 `;
 export const Select = styled.select`
   margin-bottom: 20px;
   border: none;
   height: 50px;
   border-radius: 4px;
-
+  color: #fff;
   padding-left: 15px;
-  background: #eee;
+  background: #000014;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 `;
@@ -74,7 +76,7 @@ export const Select = styled.select`
 export const Button = styled.button`
   outline: none;
   border: none;
-  background: #0d97c5;
+  background: #7800ff;
   font-weight: bold;
   font-size: 20px;
   color: #fff;
@@ -84,7 +86,7 @@ export const Button = styled.button`
   align-self: center;
   border-radius: 25px;
   cursor: pointer;
-  filter: drop-shadow(0px 0px 2px #0d97c588);
+  filter: drop-shadow(0px 0px 2px #7800ff88);
   transition: transform ease-in-out 0.2s;
 
   &:hover {

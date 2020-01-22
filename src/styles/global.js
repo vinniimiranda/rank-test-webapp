@@ -19,6 +19,6 @@ html, body, #root{
 }
 
   body {
-    background: #0d97c5;
+    background: #000014;
   }
 `;
