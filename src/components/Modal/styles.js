@@ -15,7 +15,7 @@ export const Container = styled.div`
 export const CardModal = styled.div`
   width: 400px;
   height: 400px;
-  background: #eee;
+  background: #fff;
   border-radius: 4px;
   filter: drop-shadow(3px 3px 3px #333);
   display: flex;
@@ -35,6 +35,12 @@ export const CardModal = styled.div`
     background: #fff;
     justify-content: center;
     border-radius: 4px;
+
+    label {
+      padding-left: 5px;
+      font-weight: bold;
+      color: #0d97c5;
+    }
   }
 `;
 
@@ -46,7 +52,18 @@ export const TextInput = styled.input`
   margin-bottom: 20px;
   border: none;
   height: 50px;
-  border-radius: 25px;
+  border-radius: 4px;
+
+  padding-left: 15px;
+  background: #eee;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+`;
+export const Select = styled.select`
+  margin-bottom: 20px;
+  border: none;
+  height: 50px;
+  border-radius: 4px;
 
   padding-left: 15px;
   background: #eee;

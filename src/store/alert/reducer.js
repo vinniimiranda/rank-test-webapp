@@ -1,23 +1,24 @@
 const INITAL_STATE = {
-  open: false
+  data: null,
+  reload: false
 };
 
 export default function modalReducer(state = INITAL_STATE, action) {
   switch (action.type) {
-    case "@modal/OPEN":
-      return {
-        ...state,
-        open: true
-      };
     case "@alert/SET_DATA":
       return {
         ...state,
-        open: true
+        data: action.payload
       };
     case "@modal/CLOSE":
       return {
         ...state,
-        open: false
+        data: null
+      };
+    case "@alert/RELOAD":
+      return {
+        ...state,
+        reload: !state.reload
       };
     default:
       return state;

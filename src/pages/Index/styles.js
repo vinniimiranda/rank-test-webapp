@@ -3,6 +3,21 @@ import styled from "styled-components";
 export const Header = styled.h1`
   color: #fff;
 `;
+export const AddButon = styled.button`
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(2px 2px 1px #333);
+  cursor: pointer;
+  position: absolute;
+  z-index: 3;
+  bottom: 2rem;
+  right: 2rem;
+`;
 
 export const Card = styled.div`
   display: flex;
