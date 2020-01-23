@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
 import { MdEdit, MdClose, MdAdd } from "react-icons/md";
+import { toast } from "react-toastify";
 
 import { Header, Card, Actions, AlertTitle, AddButon } from "./styles";
 import { Container } from "./../../components/Layout/Container/index";
@@ -32,6 +32,7 @@ export default function Index() {
 
   async function handleRemove({ id }) {
     await api.delete(`/alerts/${id}`);
+    toast.success("Alert removed successfully!");
     dispatch(reloadAlerts());
   }
   return (
